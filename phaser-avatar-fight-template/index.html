@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111a28" />
+  <title>Umer's Life: Beating Edition</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script>
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main id="app" aria-label="Umer's Life: Beating Edition">
+    <div id="game" aria-label="Fullscreen pixel art fighting game"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <header class="hud" id="hud" hidden>
+      <div class="brand">UMER'S LIFE: <span>BEATING EDITION</span></div>
+      <button type="button" id="change-avatar" class="small-button">Change avatar ↗</button>
+    </header>
+    <div class="instructions" id="instructions" hidden>
+      <span>PRESS</span> <kbd>A</kbd> PUNCH <kbd>W</kbd> KICK <kbd>D</kbd> SLAP
+      <div class="hit-counter" id="hit-counter">HITS 000</div>
+    </div>
+    <nav class="touch-controls" id="touch-controls" aria-label="Attack controls" hidden>
+      <button type="button" data-action="punch"><kbd>A</kbd><span>PUNCH</span></button>
+      <button type="button" data-action="kick"><kbd>W</kbd><span>KICK</span></button>
+      <button type="button" data-action="slap"><kbd>D</kbd><span>SLAP</span></button>
+    </nav>
+    <p class="announcement" id="status" aria-live="polite">Choose your avatar to begin.</p>
+    <section class="selection" id="selection" aria-labelledby="choose-title">
+      <div class="selection-card">
+        <p class="eyebrow">READY, PLAYER ONE?</p>
+        <h1 id="choose-title">CHOOSE YOUR AVATAR</h1>
+        <p class="subheading">Pick your fighter, then take on the target.</p>
+        <div class="avatar-grid" aria-label="Available fighters">
+          <button type="button" class="avatar" data-avatar="avatar-1"><img src="assets/avatars/avatar-1/idle.png" alt=""/><span>IRZA</span></button>
+          <button type="button" class="avatar" data-avatar="avatar-2"><img src="assets/avatars/avatar-2/idle.png" alt=""/><span>LABIBA</span></button>
+          <button type="button" class="avatar" data-avatar="avatar-3"><img src="assets/avatars/avatar-3/idle.png" alt=""/><span>RABI</span></button>
+          <button type="button" class="avatar" data-avatar="avatar-4"><img src="assets/avatars/avatar-4/idle.png" alt=""/><span>GUL</span></button>
+          <button type="button" class="avatar" data-avatar="avatar-5"><img src="assets/avatars/avatar-5/idle.png" alt=""/><span>LATIF</span></button>
+        </div>
+        <p class="selection-foot">CLICK A FIGHTER TO START · A / W / D TO ATTACK</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
